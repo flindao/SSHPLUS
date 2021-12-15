@@ -19,8 +19,11 @@ then
 echo "Usuário Valido"
 else
 echo "Usuário inválido"
-invalid_pass
+$invalid_pass
    exit
+rm -rf $HOME/Plus > /dev/null 2>&1
+sleep 2
+clear; exit 1
    }
 [[ "$(whoami)" != "root" ]] && {
 echo -e "\033[1;33m[\033[1;31mErro\033[1;33m] \033[1;37m- \033[1;33mvocê precisa executar como root\033[0m"
