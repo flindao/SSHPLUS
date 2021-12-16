@@ -15,7 +15,7 @@ valid_pass="1234"
 
 if [ "$login" == "$valid_user" ] && [ "$pass" == "$valid_pass" ];
 then
-echo "USUÁRIO VÁLIDO"; echo -e "\n\033[1;31mDIGITE [O1] \033[1;33mpara \033[1;32mMENU!\033[0m"; read
+echo "USUÁRIO VÁLIDO"
 else
 echo "USUÁRIO INVÁLIDO"
 fi
