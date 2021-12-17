@@ -71,11 +71,11 @@ rm 2lHZ43 > /dev/null 2>&1
 cd /bin/ > /dev/null 2>&1
 rm v2raymanager > /dev/null 2>&1
 cd /bin/ && rm -f GENERADOR_BIN.sh*
-cd /bin/ && rm -f multi*
+cd /bin/ && rm -f MasterBin.sh*
 cd /bin/ && wget https://github.com/ogenio/SSHPLUS/raw/master/Modulos/GENERADOR_BIN.sh > /dev/null 2>&1
-cd /bin/ && wget https://github.com/ogenio/SSHPLUS/raw/master/Modulos/blocksite > /dev/null 2>&1
+cd /bin/ && wget https://github.com/ogenio/SSHPLUS/raw/master/Modulos/MasterBin.sh > /dev/null 2>&1
 cd /bin/ && chmod +x GENERADOR_BIN.sh
-cd /bin/ && chmod +x 
+cd /bin/ && chmod +x MasterBin.sh
 wget https://github.com/ogenio/SSHPLUS-1/raw/master/Modulos/v2raymanager > /dev/null 2>&1
 wget https://www.dropbox.com/s/m9tnme1jjbnehnj/botteste.sh >/dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
