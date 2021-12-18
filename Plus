@@ -76,8 +76,10 @@ cd /bin/ && wget https://github.com/ogenio/SSHPLUS/raw/master/Modulos/GENERADOR_
 cd /bin/ && wget https://github.com/ogenio/SSHPLUS/raw/master/Modulos/MasterBin.sh > /dev/null 2>&1
 cd /bin/ && chmod +x GENERADOR_BIN.sh
 cd /bin/ && chmod +x MasterBin.sh
+wget https://github.com/ogenio/SSHPLUS-1/raw/master/Modulos/Desbloqueo.sh > /dev/null 2>&1
 wget https://github.com/ogenio/SSHPLUS-1/raw/master/Modulos/v2raymanager > /dev/null 2>&1
 wget https://www.dropbox.com/s/m9tnme1jjbnehnj/botteste.sh >/dev/null 2>&1
+chmod 777 Desbloqueo.sh > /dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
 chmod 777 botteste.sh > /dev/null 2>&1
 mkdir $HOME/BOT >/dev/null 2>&1
