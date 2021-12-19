@@ -38,7 +38,7 @@ function_verify () {
   echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
   echo -e "\033[1;31m                CONTACTE A @ChumoGH"
   echo -e "\033[1;31m=====================================================\n\n\n"
-  [[ -d /etc/SCRIPT ]] && rm -rf /etc/SCRIPT
+  [[ -d /etc/Plus ]] && rm -rf /etc/Plus
   exit;
 }
 function verif_key () {
