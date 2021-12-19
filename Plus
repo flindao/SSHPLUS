@@ -1,4 +1,13 @@
 #!/bin/bash
+function_verify () {
+  permited=$(curl -sSL "https://raw.githubusercontent.com/ogenio/VPSbot/main/TeleBotGen/Control/Control-Bot")
+  [[ $(echo $permited|grep "${IP}") = "" ]] && {
+  echo -e "\n\n\n\033[1;31m====================================================="
+  echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
+  echo -e "\033[1;31m                CONTACTE A @ChumoGH"
+  echo -e "\033[1;31m=====================================================\n\n\n"
+  [[ -d /etc/SCRIPT ]] && rm -rf /etc/SCRIPT
+  exit 1
 [[ "$(whoami)" != "root" ]] && {
 echo -e "\033[1;33m[\033[1;31mErro\033[1;33m] \033[1;37m- \033[1;33mvocê precisa executar como root\033[0m"
 rm $HOME/Plus > /dev/null 2>&1; exit 0
