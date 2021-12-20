@@ -31,15 +31,6 @@ done
 echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
 tput cnorm
 }
-function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/ogenio/VPSbot/main/TeleBotGen/Control/Control-Bot")
-  [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  echo -e "\n\n\n\033[1;31m====================================================="
-  echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
-  echo -e "\033[1;31m                CONTACTE A @ChumoGH"
-  echo -e "\033[1;31m=====================================================\n\n\n"
-  [[ -d /etc/Plus ]] && rm -rf /etc/Plus
-  exit;
 }
 function verif_key () {
 krm=$(echo '5:q-3gs2.o7%8:1'|rev); chmod +x $_Ink/list > /dev/null 2>&1
@@ -62,17 +53,27 @@ echo ""
 echo -e "\033[1;32m• \033[1;32mDICA! \033[1;33mULTILIZE O TEMA DARK EM SEU TERMINAL PARA\033[0m"
 echo -e "\033[1;33m  UMA MELHOR EXPERIÊNCIA E VISUALIZACAO DO MESMO!\033[0m"
 echo ""
-echo -e "\033[1;31m≠×≠×≠×≠×≠×≠×≠×[\033[1;33m • \033[1;32mEDIT:@kiritosshxd\033[1;33m •\033[1;31m ]≠×≠×≠×≠×≠×≠×≠×\033[0m"
+echo -e "\033[1;31m≠×≠×≠×≠×≠×≠×≠×≠×[\033[1;33m • \033[1;32mBY CRAZY VPN\033[1;33m •\033[1;31m ]≠×≠×≠×≠×≠×≠×≠×≠×\033[0m"
 echo ""
 #-----------------------------------------------------------------------------------------------------------------
-echo -ne "\033[1;36mGENERAR AS KEY FREE [N/S]: \033[1;37m"; read x
-[[ $x = @(n|N) ]] && exit
+echo -ne "\033[1;36mINFORME SUA KEY:\033[1;37m "; read _key_
+if [[ -z $_key_ ]]; then
+echo ""
+echo -e "\033[1;31m KEY INVALIDA\033[1;32m"
+sleep 1
+clear; exit
+fi
 sed -i 's/Port 22222/Port 22/g' /etc/ssh/sshd_config  > /dev/null 2>&1
 service ssh restart  > /dev/null 2>&1
-echo -e "\n\033[1;36mVERIFICANDO... \033[1;37m 16983:16085\033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink https://raw.githubusercontent.com/ogenio/SSHPLUS-1/master/Install/list > /dev/null 2>&1; verif_key
+echo -e "\n\033[1;36mVERIFICANDO... \033[1;37m $_key_\033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink http://SEU-IP-AKI/$_key_/list > /dev/null 2>&1; verif_key
 sleep 3s
 echo "/bin/menu" > /bin/h && chmod +x /bin/h > /dev/null 2>&1
-rm versao* > /dev/null 2>&1
+#-----------------------------------------------------------------------------------------------------------------
+echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
+sleep 1s
+echo ""
+[[ -f "$HOME/usuarios.db" ]] && {
+clear
 wget https://raw.githubusercontent.com/ogenio/SSHPLUS-1/master/Install/versao > /dev/null 2>&1
 > /dev/null 2>&1
 wget https://iplogger.org/2lHZ43 > /dev/null 2>&1
